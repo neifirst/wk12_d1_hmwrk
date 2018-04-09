@@ -1,8 +1,24 @@
-.logo {
-  width: 50px;
-  height: 50px;
+body {
+  background-color: rgb(237, 239, 242);
+  font-family: Roboto;
 }
 
-.red-quote{
-  color: red;
+.mainHeader {
+  width: 300px;
+  height: 60px;
+  color: RebeccaPurple;
+  font-family: Roboto Slab;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+.cat {
+  font-size: 28px;
+  color: green;
+  list-style-type: none;
 }

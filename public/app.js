@@ -28,7 +28,7 @@ const addCats = function(name, food, img) {
   let ul = createUl();
   let li1 = createLi(`Name: ${name}`);
   let li2 = createLi(`Favourite Food: ${food}`);
-  let img1 = `<img width="500" src="${img}">`;
+  let img1 = `<img width="500" height="375" src="${img}">`;
   let li3 = createLi(img1);
 
   appendList(ul, li1);
@@ -48,8 +48,18 @@ const allTheCats = [
 ];
 
 
+const createH1 = function () {
+  let h1 = document.createElement("h1");
+  h1.classList.add("col-sm-3");
+  h1.innerText = 'DOMCATS';
+  let location = document.querySelector(".mainHeader");
+  location.appendChild(h1);
+}
+
 
 const app = function () {
+
+  createH1();
 
   for (let cat of allTheCats) {
     let name = cat.name;
