@@ -10,7 +10,7 @@ const createLi = function (data) {
   return li;
 }
 
-const appendElements = function (ul, li) {
+const appendList = function (ul, li) {
   ul.appendChild(li);
 }
 
@@ -24,11 +24,12 @@ const addCat = function(name, food, img) {
   let ul = createUl();
   let li1 = createLi(name);
   let li2 = createLi(food);
-  let li3 = createLi(img);
+  let img1 = `<img width="500" src="${img}">`;
+  let li3 = createLi(img1);
 
-  appendElements(ul, li1);
-  appendElements(ul, li2);
-  appendElements(ul, li3);
+  appendList(ul, li1);
+  appendList(ul, li2);
+  appendList(ul, li3);
   fixNewBlock("#cats", ul);
 }
 
@@ -36,7 +37,7 @@ const addCat = function(name, food, img) {
 
 
 const app = function () {
-addCat('Dave', 'Cheese', '<img width="500" src="http://78.media.tumblr.com/8d3e7364417a8f7e0abc04a223857b12/tumblr_otox3fKZ9Y1s05s0mo9_1280.png">');
+addCat('Dave', 'Cheese', 'http://78.media.tumblr.com/8d3e7364417a8f7e0abc04a223857b12/tumblr_otox3fKZ9Y1s05s0mo9_1280.png');
 }
 
 window.onload = app;
